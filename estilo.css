@@ -1,0 +1,165 @@
+:root {
+    --primary: #001f3f;
+    --secondary: #00c896;
+    --light: #f4f4f4;
+    --dark: #111;
+    --text: #333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: var(--light);
+    color: var(--text);
+}
+
+header {
+    background: linear-gradient(to right, var(--primary), #003974);
+    color: white;
+    padding: 4rem 1.5rem;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 3em;
+    margin-bottom: 0.7rem;
+}
+
+header p {
+    font-size: 1.2em;
+    opacity: 0.9;
+}
+
+nav {
+    background: var(--dark);
+    padding: 1rem 1.5rem;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 1.2rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.5rem 0.7rem;
+    transition: 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+    background: var(--secondary);
+    border-radius: 5px;
+    color: #000;
+}
+
+.container {
+    display: grid;
+    grid-template-areas:
+        "main"
+        "cards"
+        "footer";
+    gap: 2.5rem;
+    max-width: 1200px;
+    margin: auto;
+    padding: 2.5rem 1.5rem;
+}
+
+main {
+    grid-area: main;
+}
+
+main img {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 1.2rem;
+}
+
+main h2 {
+    color: var(--primary);
+    margin-bottom: 1.2rem;
+}
+
+main p {
+    font-size: 1.05em;
+    margin-bottom: 1.2rem;
+ }
+
+main a {
+    display: inline-block;
+    background: var(--primary);
+    color: white;
+    text-decoration: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+main a:hover {
+    background: #000d20;
+}
+
+.cards {
+    grid-area: cards;
+}
+
+.cards h3 {
+    color: var(--primary);
+    margin-bottom: 1.2rem;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.2rem;
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: 10rem;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 1rem;
+}
+
+.card-content h4 {
+    margin-bottom: 1rem;
+    color: var(--secondary);
+}
+
+footer {
+    grid-area: footer;
+    background: #111;
+    color: #ccc;
+    padding: 1.9rem;
+    text-align: center;
+    font-size: 0.9em;
+    border-radius: 10px;
+}
