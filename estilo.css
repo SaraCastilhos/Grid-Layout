@@ -37,7 +37,7 @@ header p {
 
 nav {
     background: var(--dark);
-    padding: 1rem 1.5rem;
+    padding: 2vmin 1vmin;
     position: sticky;
     top: 0;
     z-index: 1;
@@ -101,7 +101,7 @@ main a {
     background: var(--primary);
     color: white;
     text-decoration: none;
-    padding: 0.8rem 1.5rem;
+    padding: 2.2vmin 1.5rem;
     border-radius: 6px;
     font-weight: 600;
     transition: background 0.3s;
@@ -124,6 +124,8 @@ main a:hover {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1.2rem;
+    flex-wrap: wrap;
+    flex-direction: column;
 }
 
 .card {
