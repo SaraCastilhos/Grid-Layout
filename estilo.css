@@ -67,10 +67,9 @@ nav a.active {
 
 .container {
     display: grid;
-    grid-template-areas:
-        "main"
-        "cards"
-        "footer";
+    grid-template-areas: 'main'
+                            'cards'
+                                'footer';
     gap: 2.5rem;
     max-width: 1200px;
     margin: auto;
