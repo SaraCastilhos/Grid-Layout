@@ -171,4 +171,8 @@ footer {
       nav ul {
         gap: 0.8rem;
       }
+
+      .container {
+        padding: 20px 10px;
+      }
     }
